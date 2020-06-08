@@ -41,10 +41,9 @@ def maxPairDiff (row ['Water Level']:
  
  Extra Credit)
  #!/usr/bin/env python3
-
 fhand = open('CO-OPS__8729108__wl.csv')
-station = 8729108
-date = today 
-format = csv
-print (data)
+    station = 8729108
+    date = today 
+    format = csv
+    print (data)
 
