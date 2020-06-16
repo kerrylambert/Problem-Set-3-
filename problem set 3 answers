@@ -1,37 +1,42 @@
 Question 1)
 #!/usr/bin/env python3
 
-fhand = open('CO-OPS__8729108__wl.csv')
+fhand = open('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+highestWaterLevel = 0
+date = 0
 count = 0
-for i in fhand:
-    answer = max(int(column[2])) + column[1]
-    #Column 2 is Water Level
-    #Column 1 is Date and Time 
-    print (answer)
+
+for line in fhand:
+    delimiter = ','
+    t = line.split(delimiter)
+    highestWaterLevel= float(- 1.0)
+    if count > 0:
+        try:
+            highestWaterLevel= float(- 1.0)
+            if waterLevel > highestWaterLevel:
+                highestWaterLevel = waterLevel
+            date = t[0]
+    count = + 1 
+    
+print(highestWaterLevel)
+print(date)
     
  
  Question 2)
  #Pandas script 
+
 import pandas as pd
-!head -n 5 CO-OPS__8729108__wl.csv
-from_csv = pd.read_csv('CO-OPS__8729108__wl.csv')
-from_csv.head()
-  #read file 
-df['Date Time', max(int)'Water Level']
-  #output max values as a dataframe 
+df=pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv') 
+df[df[' Water Level'] == df[' Water Level'].max()]
 
 Question 3)
 #!/usr/bin/env python3
-fhand = open('CO-OPS__8729108__wl.csv')
-count = 0
-def maxPairDiff (row ['Water Level']:
-    listDiff=[]
-    for p,i in enumerate('Water Level'):
-        evalList=[e for e in row[p+1:] if e>i]
-        if len(evalList)>0:
-            listDiff.append(max(evalList)-i)
-        #max difference dunction between rows
-    return (max(listDiff))
+import pandas as pd
+df=pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv') 
+highestWaterLevel = dataFrame['Water Level'].max()
+date = dataFrame.iloc[420][0]
+print("Date:{} highest water level:{}".format(date, highestWaterLevel))
+
     
  Question 4) 
  undergrad
